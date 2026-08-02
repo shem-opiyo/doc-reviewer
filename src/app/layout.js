@@ -23,8 +23,9 @@ const navItems =[
   {href: "/", label: "Home"},
   {href: "/upload", label: "Upload"},
   {href: "/documents", label: "Documents"},
-  {href: "/settings", label: "Settings"},
   {href: "/review", label: "Review"},
+  {href: "/settings", label: "Settings"},
+  
 ]
 
 export default function RootLayout({ children }) {

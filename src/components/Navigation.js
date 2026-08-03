@@ -1,6 +1,8 @@
 "use client";
 
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -11,17 +13,29 @@ const navItems = [
 ];
 
 export default function Navigation() {
-  return (
+    // Get the current URL path
+    const pathname = usePathname();
+
+    return (
     <nav className="space-y-2">
-      {navItems.map((item) => (
+      {navItems.map((item) => {
+        const isActive = pathname === item.href;
+        return(
+            // display the links
         <Link
           key={item.href}
           href={item.href}
-          className="block px-4 py-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 transition"
-        >
+        // highlight the active navigation link
+          className={`block px-4 py-2 rounded-md transition ${
+              isActive
+                ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200 font-medium"
+                : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800"
+            }`}
+            >
           {item.label}
         </Link>
-      ))}
+        );
+      })}
     </nav>
   );
 }

@@ -1,9 +1,13 @@
+
+
 export const metadata ={
     title: "Review & Edit | DocReviewer",
     description: "Compare original and proofread versions side-by-side and accept or reject AI suggestions."
 
 };
-export default function ReviewPage(){
+export default function ReviewPage(){   
+    
+    
     return(
         <div className="p-8">
             {/* header banner section */}

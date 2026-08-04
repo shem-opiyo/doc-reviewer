@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// define the navigation configuration
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/upload", label: "Upload" },
@@ -13,7 +14,7 @@ const navItems = [
 ];
 
 export default function Navigation() {
-    // Get the current URL path
+    // Get the current URL path/ route
     const pathname = usePathname();
 
     return (
@@ -28,7 +29,7 @@ export default function Navigation() {
         // highlight the active navigation link
           className={`block px-4 py-2 rounded-md transition ${
               isActive
-                ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200 font-medium"
+                ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200 fondium"
                 : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800"
             }`}
             >

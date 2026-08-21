@@ -101,7 +101,9 @@ export default function UploadSection() {
       // Give the user time to see the success message  before navigating to the review page.
       setTimeout(() => {
         console.log("upload workflow completed. Redirecting to review...");
-        router.push("/review");
+        // router.push("/review");
+        const uploadedFileName = file.name;
+        router.push(`/review?document=${encodeURIComponent(uploadedFileName)}`);
       }, 1500);
     } catch {
       // Handle unexpected errors during the upload workflow.

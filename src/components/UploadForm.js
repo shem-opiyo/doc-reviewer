@@ -82,7 +82,8 @@ export default function UploadForm() {
       setStatus("success");
       // Give the user time to see the success message  before navigating to the review page.
       setTimeout(() => {
-        router.push("/review");
+        // router.push("/review");
+        router.push(`/review?document=${encodeURIComponent(file.name)}`);
       }, 2000);
     } catch {
       // Handle unexpected errors during the upload workflow.

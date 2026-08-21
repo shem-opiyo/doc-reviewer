@@ -9,7 +9,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/upload", label: "Upload" },
   { href: "/documents", label: "Documents" },
-  { href: "/review", label: "Review" },
+  // { href: "/review", label: "Review" },
   { href: "/settings", label: "Settings" },
 ];
 

@@ -1,7 +1,6 @@
 
 
 import UploadSection from "@/features/document-upload/index";
-import { features } from "node:process";
 
 export const metadata = {
   title: "Upload Document | DocReviewer",
